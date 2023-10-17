@@ -4,11 +4,8 @@ export type FormState = {
   title: string;
   description: string;
   image: string;
-  liveSiteUrl: string | null;
-  githubUrl: string | null;
-  linkedinUrl: string | null;
-  behanceUrl: string | null;
-  youtubeUrl: string | null;
+  liveSiteUrl: string;
+  githubUrl: string;
   category: string;
 };
 
@@ -16,11 +13,8 @@ export interface ProjectInterface {
   title: string;
   description: string;
   image: string;
-  liveSiteUrl: string | null;
-  githubUrl: string | null;
-  linkedinUrl: string | null;
-  behanceUrl: string | null;
-  youtubeUrl: string | null;
+  liveSiteUrl: string;
+  githubUrl: string;
   category: string;
   id: string;
   createdBy: {
@@ -63,10 +57,7 @@ export interface ProjectForm {
   title: string;
   description: string;
   image: string;
-  liveSiteUrl: string | null;
-  githubUrl: string | null;
-  linkedinUrl: string | null;
-  behanceUrl: string | null;
-  youtubeUrl: string | null;
+  liveSiteUrl: string;
+  githubUrl: string;
   category: string;
 }
