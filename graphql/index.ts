@@ -16,7 +16,7 @@ export const getUserQuery = `
             }
         }
     }
-`
+`;
 
 export const createUserMutation = `
 	mutation CreateUser($input: UserCreateInput!) {
@@ -38,7 +38,6 @@ mutation CreateProject($input: ProjectCreateInput!) {
       id
       title
       description
-      youtubeUrl
       linkedinUrl
 	  githubUrl
 	  behanceUrl
@@ -49,7 +48,7 @@ mutation CreateProject($input: ProjectCreateInput!) {
       }
     }
   }
-}`; 
+}`;
 
 export const updateProfileMutation = `
   mutation UpdateUser($id: ID!, $input: UserUpdateInput!) {
@@ -68,8 +67,6 @@ export const updateProfileMutation = `
   }
 `;
 
-
-
 export const updateProjectMutation = `
 	mutation UpdateProject($id: ID!, $input: ProjectUpdateInput!) {
 		projectUpdate(by: { id: $id }, input: $input) {
@@ -81,7 +78,6 @@ export const updateProjectMutation = `
 			linkedinUrl
 			liveSiteUrl
 			behanceUrl
-			youtubeUrl
 			createdBy {
 			  email
 			  name
@@ -133,7 +129,6 @@ query ProjectCollection($endcursor: String, $category: String) {
   }
 `;
 
-
 export const getProjectByIdQuery = `
 query GetProjectById($id: ID!) {
 	project(by: { id: $id }) {
@@ -142,7 +137,6 @@ query GetProjectById($id: ID!) {
 	  description
 	  image
 	  liveSiteUrl
-	  youtubeUrl
 	  githubUrl
 	  linkedinUrl
 	  description

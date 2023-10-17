@@ -49,7 +49,6 @@ const ProjectForm = ({ type, session, project }: Props) => {
           githubUrl: form.githubUrl || "",
           linkedinUrl: form.linkedinUrl || "",
           behanceUrl: form.behanceUrl || "",
-          youtubeUrl: form.youtubeUrl || "",
         };
 
         await createNewProject(newForm, session?.user?.id, token);
@@ -110,7 +109,6 @@ const ProjectForm = ({ type, session, project }: Props) => {
     linkedinUrl: project?.linkedinUrl || "",
     behanceUrl: project?.behanceUrl || "",
     category: project?.category || "",
-    youtubeUrl: project?.youtubeUrl || "",
   });
 
   return (
@@ -198,20 +196,6 @@ const ProjectForm = ({ type, session, project }: Props) => {
           state={form.behanceUrl}
           placeholder="https://github.com/username"
           setState={(value) => handleStateChange("behanceUrl", value)}
-          isRequired={false}
-        />
-      )}
-
-      {/* Youtube URL for Web, Mobile, UI/UX, 3D Design, Video Editing */}
-      {["Web", "Mobile", "UI/UX", "3D Design", "Video Editing"].includes(
-        form.category
-      ) && (
-        <FormField
-          type="url"
-          title="Youtube URL (Optional)"
-          state={form.youtubeUrl}
-          placeholder="https://github.com/username"
-          setState={(value) => handleStateChange("youtubeUrl", value)}
           isRequired={false}
         />
       )}
